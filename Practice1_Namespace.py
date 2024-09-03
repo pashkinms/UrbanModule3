@@ -11,7 +11,7 @@ def string_info(string: str):
     """Takes an argument of str type
         Returns cortege of string_length string.upper string.lower"""
     count_calls()
-    return {len(string), string.upper(), string.lower()}
+    return len(string), string.upper(), string.lower()
 
 
 def is_contains(string: str, list: list):
