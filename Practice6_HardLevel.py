@@ -15,13 +15,13 @@ def calculate_structure_sum(data):
     result = 0
 
     for element in data:
-        if type(element) == int:
+        if isinstance(element, int):
             result += element
-        elif type(element) == str:
+        elif isinstance(element, str):
             result += len(element)
-        elif type(element) == tuple or type(element) == list or type(element) == set:
+        elif isinstance(element, tuple) or isinstance(element, list) or isinstance(element, set):
             result += calculate_structure_sum(element)
-        elif type(element) == dict:
+        elif isinstance(element, dict):
             key_list = list(element)
             for key in key_list:
                 result += len(key)
